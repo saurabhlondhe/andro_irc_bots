@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.centos.ircbot">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="#irc"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".hello_bot"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".web"
+            android:parentActivityName=".hello_bot" />
+        <activity
+            android:name=".roll_call_bot"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".settings"></activity>
+    </application>
+
+</manifest>
